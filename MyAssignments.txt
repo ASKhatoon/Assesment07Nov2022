@@ -1,0 +1,78 @@
+Nov07th Assignments
+Arsheen Safa Khatoon
+
+package Test;
+
+import java.util.Scanner;
+
+public class CountCharecters {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a string");
+		String str =sc.nextLine();
+		System.out.println("You have Entered the String : "+str);
+		
+		int count = 0;
+		for(int i=0 ; i<str.length(); i++) {
+			if(str.charAt(i)!=' ') 
+				count++;
+		}
+		
+		System.out.println("Total Number of Charecters in the "+str+" is : "+count);
+
+	}
+
+}
+------------
+
+package Test;
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+
+	public static void main(String[] args) {
+		int num,digit,sum = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Three digit number");
+		num  = sc.nextInt();
+		while(num>0) {
+			digit = num%10;
+			sum = sum+digit;
+			num = num/10;
+		}
+		System.out.println("Sum of Digits : "+sum);
+		
+	}	
+
+}
+
+-----------------------
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+class  ConvertSetIntoList {
+    public static void main(String[] args)
+    {
+ 
+        HashSet<String> flower_set = new HashSet<>();
+ 
+        flower_set.add("tulip");
+        flower_set.add("rose");
+        flower_set.add("orchid");
+        flower_set.add("marie-gold");
+ 
+       
+        ArrayList<String> flower_array = new ArrayList<>(flower_set);
+ 
+       
+        System.out.println("Elements of flower Arraylist are :");
+        System.out.println(flower_array);
+ 
+       
+        System.out.print("Element at index 0 is : "+ flower_array.get(0) + " ");
+    }
+}
