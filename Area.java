@@ -1,64 +1,26 @@
+//22
+//Write a program to print the area of a rectangle by creating a class named 'Area'
+//taking the values of its length and breadth as parameters of its constructor and having
+//a method named 'returnArea' which returns the area of the rectangle. Length and breadth
+//of rectangle are entered through keyboard.
 
-//Java Program to Find the Area of Square, Rectangle and Circle using Method Overloading
 
-public class Area 
-{
-  public static void main(String[] args)
-  {
-      Rectangle obj = new Rectangle();
-     
-      obj.Area(30, 20);
-      obj.Area(12.5, 4.5);
-      Circle obj1 = new Circle();
-     
-      obj1.Area(3);
-      obj1.Area(5.5);
-      Square obj2 = new Square();
-     
-      obj2.Area(20);
-      obj2.Area(5.2);
-      
-  }
+package str;
+import java.util.Scanner;
+
+public class Area {
+	
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter length of the Rectangle : ");
+		int l = s.nextInt();
+		
+		System.out.println("Enter breadth of the Rectangle : ");
+		int b = s.nextInt();
+		
+		int area = l*b;
+		System.out.println("Area of Rectangle : "+area);
+	}
+
 }
-class Square 
-{
-  void Area(double side)
-  {
-      System.out.println("Area of the Square: "+ side * side);
-  }
-  void Area(float side)
-  {
-      System.out.println("Area of the Square: "+ side * side);
-  }
-}
-class Circle 
-{
-  static final double PI = Math.PI;
-  
-  void Area(double r)
-  {
-      double A = PI * r * r;
-
-      System.out.println("The area of the circle is :" + A);
-  }
-
-  void Area(float r)
-  {
-      double A = PI * r * r;
-
-      System.out.println("The area of the circle is :" + A);
-  }
-}
-class Rectangle 
-{
-  void Area(double l, double b)
-  {
-      System.out.println("Area of the rectangle: " + l * b);
-  }
-  void Area(int l, int b)
-  {
-      System.out.println("Area of the rectangle: " + l * b);
-  }
-}
-
-
